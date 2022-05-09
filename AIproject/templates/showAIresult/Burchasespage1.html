@@ -1,0 +1,14 @@
+{% extends 'admin/adminpanel1.html' %}
+{% load static %}
+{% block body_page %}
+
+
+  <div class='container' style="text-align: center;">
+    <h1 style="direction: rtl;">{{ msg }}</h1>
+
+      <img src="{% static 'images/' %}{{ filename }}" class="img-fluid pad" alt="" />
+  
+    
+  </div>
+{% endblock %}
+  

@@ -1,0 +1,38 @@
+{% extends 'admin/adminpanel1.html' %}
+{% load static %}
+{% block body_page %}
+
+<div class="container">
+  <h2 class="text-center" style="text-align: center;"> {{ msg }}</h2><br>	
+  <select onchange="f('burchases/table3/'+this.value)">
+    {% for x in r %}
+      <option value="{{ x }}">{{ x }}</option>
+    {% endfor %}
+  </select>		
+  <table class="table table-dark table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>User</th>
+      <th>Frequency</th>
+      <th>Montery</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+    {% if d %}
+    
+    {% for i in d %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{i.user}}</td>
+      <td>{{i.id}}</td>
+      <td>{{i.total}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </tbody>
+  </table>
+  </div>
+{% endblock %}
+  

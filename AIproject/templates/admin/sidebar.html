@@ -1,0 +1,210 @@
+{% load static%}
+
+    
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+      <img src="{% static 'dist/img/AdminLTELogo.png'%}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">My Dashboard</span>
+    </a>
+
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-header"></li>
+
+          <li class="nav-header"><h3>Burcharses</h3></li>
+
+          
+          <li class="nav-item has-treeview {% if 'charts' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'charts' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Charts
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/burchases/fig5" class="nav-link {% if 'charts-chartjs' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>تعداد خرید افراد</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/burchases/fig8" class="nav-link {% if 'charts-flot' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>حجم معاملات</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/burchases/fig9" class="nav-link {% if 'charts-inline' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>تعداد فروش</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/burchases/fig10" class="nav-link {% if 'charts-inline' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>حجم فروش</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          
+
+          <li class="nav-item has-treeview {% if 'tables-' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'tables-' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tables
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/burchases/table1/10/" class="nav-link {% if 'tables-simple' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>تعداد خرید و مبلغ</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/burchases/table2/" class="nav-link {% if 'tables-data' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>آمار تعداد و مبلغ </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/burchases/table3/10/" class="nav-link {% if 'tables-jsgrid' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>مشتری برحسب خرید</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/burchases/table4/" class="nav-link {% if 'tables-jsgrid' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>مشتری بر حسب مبلغ</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-header"><h3>Users</h3></li>
+
+          
+          <li class="nav-item has-treeview {% if 'charts' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'charts' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Charts
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/users/fig11" class="nav-link {% if 'charts-chartjs' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> ثبت نام در روز</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/users/fig12" class="nav-link {% if 'charts-flot' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> ثبت نام کل</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/users/fig13" class="nav-link {% if 'charts-inline' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> ثبت نام در هفته</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          <li class="nav-header"><h3>Orders</h3></li>
+
+          
+          <li class="nav-item has-treeview {% if 'charts' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'charts' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Charts
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/users/fig11" class="nav-link {% if 'charts-chartjs' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> نمودار ثبت سفارش</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/users/fig12" class="nav-link {% if 'charts-flot' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> هیستوگرام ثبت سفارش</p>
+                </a>
+              </li>
+                            
+            </ul>
+          </li>
+          <li class="nav-item has-treeview {% if 'tables-' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'tables-' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tables
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/orders/table5/" class="nav-link {% if 'tables-simple' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>آمار سفارشات روزانه</p>
+                </a>
+              </li>
+              
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-header"><h3>Recommendation</h3></li>
+          
+          <li class="nav-item">
+            <a target="_blank" rel="noopener noreferrer"
+               href="/article/" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>Blog</p>
+            </a>
+          </li>
+
+
+          <li class="nav-header"><h3>RFM MODEL</h3></li>
+          
+          <li class="nav-item">
+            <a rel="noopener noreferrer"
+               href="/rfm/rfmmodel/" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>RFM Model</p>
+            </a>
+          </li>
+
+          
+
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  

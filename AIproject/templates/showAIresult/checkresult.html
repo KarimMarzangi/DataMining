@@ -1,0 +1,46 @@
+{% extends 'admin/adminpanel.html' %}
+{% load static %}
+{% block body_page %}
+
+
+  <div class='container'>
+    <div class="form-check">
+        <form method="post" action="">
+            {% csrf_token %}
+            <input class="form-check-input" type="checkbox" name="check1" value="4" id="m">
+            <label class="form-check-label" for="flexCheckDefault">مشتریانی که بالا ترین جچم خرید را داشته اند </label><br>
+            <input class="form-check-input" type="checkbox" name="check2" value="4" id="f">
+            <label class="form-check-label" for="flexCheckDefault">مشکتریانی که بالاترین حجم مراجعه را داشته اند </label><br>
+            <input class="form-check-input" type="checkbox" name="check3" value="1" id="r">
+            <label class="form-check-label" for="flexCheckDefault">مشتریانی که اخیرا مراجعه نموده اند </label><br>
+            <input type="submit" class="btn btn-success" value="Calculate Data"></button><br>
+        </form>
+      </div>
+      <table border="2">
+        <tr>
+          <th>name</th>
+          <th>family</th>
+          <th>email</th>
+          <th>mobile</th>
+          <th>bank</th>
+          <th>account</th>
+        </tr>
+        
+        {% for getdata in UsersDetails  %}
+        <tr>
+          <td>{{getdata.name}}</td>
+          <td>{{getdata.namefamily}}</td>
+          <td>{{getdata.email}}</td>
+          <td>{{getdata.mobile}}</td>
+          <td>{{getdata.bank}}</td>
+          <td>{{getdata.account}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      
+  </div>
+  <div>
+    <h1>{{var1}}</h1>
+  </div>
+{% endblock %}
+  
