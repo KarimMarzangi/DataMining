@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'AIproject.wsgi.application'
 DATABASES = {
     'default': {
       'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'tsetsai',
+      'NAME': 'testsai',
       'USER': 'root',
       'PASSWORD': '',
       'HOST': 'localhost',
